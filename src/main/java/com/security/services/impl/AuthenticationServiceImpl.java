@@ -25,11 +25,11 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     private final JwtService jwtService;
 
-    private AuthenticationManager authenticationManager;
+    private final AuthenticationManager authenticationManager;
 
     @Override
     public AuthenticationResponse register(RegisterRequest request) {
-        // building user entity objec using builder design pattern
+        // building user entity object using builder design pattern
         var user = User.builder()
                 .firsName(request.getFirstName())
                 .lastName(request.getLastName())
